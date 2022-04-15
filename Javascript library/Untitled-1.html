@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page A Book!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.open-button {
+  background-color: rgb(72, 101, 233);
+  color: rgb(199, 223, 255);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(184, 197, 255);
+}
+.form-container input[type=text], .form-container input[type=book] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=book]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: rgb(167, 67, 67);
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+  <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function add(){
+            let library = document.getElementById("library");
+            let author = document.getElementById("author").value;
+            let book = document.getElementById("book").value;
+            if(typeof book === 'string' && book.length === 0 || typeof author === 'string' && author.length === 0) {
+              console.log('string is empty');
+            } else {
+              console.log('string is NOT empty');
+              let listItem = document.createElement("li");
+            listItem.innerHTML = author +" "+book;
+            library.appendChild(listItem);
+            }
+            //let listItem = document.createElement("li");
+           //listItem.innerHTML = author +" "+book;
+           // library.appendChild(listItem);
+
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+  </script>
+</head>
+<body>
+        <h2>Library</h2>
+        <p>Click on the button to fill out a book request</p>
+        <div>
+          <ul id="library">
+            
+          </ul>
+        </div>
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Book</h1>
+
+    <label  for="author"><b>Author</b></label>
+    <input type="text" placeholder="Enter Author" id="author" name="author" required>
+
+    <label for="book"><b>Book</b></label>
+    <input type="book" placeholder="Enter Book Name" name="book" id="book" required>
+
+    <button type="button" class="btn" onclick="add()">Place</button>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+        
+        </body>
+        </html>
+        
+
+
+
+

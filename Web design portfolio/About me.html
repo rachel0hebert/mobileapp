@@ -6,6 +6,24 @@
                 background-color: lightslategray;
                 font-family: sans-serif;
             }
+            
+            * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+            
             .header, .footer {
   background-color: grey;
   color: white;
@@ -29,6 +47,13 @@ a {
   color: rgb(48, 57, 179);
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+        
+
         </style>
             <body>
               <p><b><a href="file:///C:/Users/Minion-12/Documents/GitHub/mobileapp/Web%20design%20portfolio/index.html#projects" target="_blank">Back to Home</a></b></p>
@@ -40,6 +65,27 @@ a {
                     <div class="box">My goals at the moment are to graduate high school and be accepted into Ringling College of Art and Design.</div>
                     <div class="box">Right now I am taking my ADV Web Development class, and we're working on building and designing websites.</div>
                 </div>
+
+                <div class="row">
+                  <div class="column">
+                    <a href="http://www.mwvctc.com/">
+                      <img alt="Qries" src="https://esc16.schoolspring.com/media/employer/image/location/61602.jpg" alt="Mountains" style="width:100%">
+                    </a>
+                    </div>
+                  <div class="column">
+                    <a href="https://www.ringling.edu/">
+                      <img alt="Qries" src="https://static.wikia.nocookie.net/rebeccaparham/images/a/a9/RinglingLogo.jpg/revision/latest?cb=20190101164448" alt="Forest" style="width:100%">
+                      </a>
+                  </div>
+                  <div class="column">
+                    <a href="http://www.mwvctc.com/programs/computer_science/computer_science_i_i">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtq52k2itfQUrMgLZHE3Wa3Qe2F092LHegDetL2ulzx-gg0_zNGSzfQ8pgbafNN6dit-8&usqp=CAU" alt="Technology" style="width:100%">
+                  </a>
+                  </div>
+                    </div>
+
+                </div>  
+
                   <div class="footer">
                     <p>Contact me:</p><br>
                     <p>school email: 2470003@sau9.org</p>
