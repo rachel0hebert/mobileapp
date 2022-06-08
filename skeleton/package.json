@@ -1,10 +1,10 @@
 {
-    "name": "socialappexample",
+    "name": "skeleton",
     "version": "1.0.0",
-    "description": "An example of a social media app",
+    "description": "",
     "main": "index.js",
-    "author": "Mr Mack",
-    "license": "MIT",
+    "author": "",
+    "license": "",
     "devDependencies": {
         "@babel/core": "^7.17.10",
         "@babel/preset-env": "^7.17.10",
